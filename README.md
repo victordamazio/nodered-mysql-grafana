@@ -31,3 +31,39 @@ Guia para instalar o Grafana: https://grafana.com/docs/grafana/latest/installati
 7 - Crie uma tabela SQL, com Primary Key e uma Timestamp automática, como essa aqui:
 
 ![image](https://user-images.githubusercontent.com/25162231/101772504-32803580-3aca-11eb-8bde-7c60f89f270f.png)
+
+8 - No Node-RED, vá na barra de configurações, e clique em “Manage palette”
+
+![image](https://user-images.githubusercontent.com/25162231/101772516-3613bc80-3aca-11eb-8c63-e9d15800d424.png)
+
+E depois instale o MySQL Node, na figura, ele já está instalado
+
+![image](https://user-images.githubusercontent.com/25162231/101772543-3f048e00-3aca-11eb-8fee-b4b7657b0fee.png)
+
+9 - Crie um flow, mais ou menos assim:
+
+![image](https://user-images.githubusercontent.com/25162231/101772559-42981500-3aca-11eb-9685-18ef5d19d2c6.png)
+
+O node function precisa ter uma Query SQL, um exemplo da qual está sendo usada
+
+![image](https://user-images.githubusercontent.com/25162231/101772574-4a57b980-3aca-11eb-9e5f-2be8952fdd32.png)
+
+Preencha o node MySQL mais ou menos assim de acordo com o seu banco, colocando o usuário, senha, e nome do banco:
+
+![image](https://user-images.githubusercontent.com/25162231/101772585-4d52aa00-3aca-11eb-874e-9d84079ffd3e.png)
+
+10 - Clique no node Inject para inserir os dados na sua tabela SQL, e verifique se a sua tabela está com os dados corretos.
+
+11 - No Grafana, vá em Configuration → Data Sources → Add Data Source → MySQL
+
+E depois, preencha mais ou menos assim
+
+![image](https://user-images.githubusercontent.com/25162231/101772598-504d9a80-3aca-11eb-8cb0-4da4fb73ea36.png)
+
+12 - Depois, crie um Dashboard e um Panel
+
+13 - No panel que você vai usar, crie um gráfico com o Data Source que você criou, configure os dados que serão lidos, e deixe eles ordenados pelo timestamp
+
+![image](https://user-images.githubusercontent.com/25162231/101772604-53e12180-3aca-11eb-9442-7c448b3e7910.png)
+
+14 - Terminado, você pode mexer em mais algumas configurações para definir como visualizar os dados, e também marcar o tempo, para o intervalo de datas que definirá quais dados serão exibidos no panel.
