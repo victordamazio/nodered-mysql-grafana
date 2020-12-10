@@ -47,10 +47,8 @@ E depois instale o MySQL Node, na figura, ele já está instalado
 O node function precisa ter uma Query SQL, um exemplo da qual está sendo usada
 
 '''
-
 msg.topic="INSERT INTO ‘schema_test_nodered’.’thermometer’ (`temperature1`, `temperature2`) VALUES (‘25’, ‘26’)"
 return msg;
-
 '''
 
 ![image](https://user-images.githubusercontent.com/25162231/101772574-4a57b980-3aca-11eb-9e5f-2be8952fdd32.png)
